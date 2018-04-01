@@ -1,4 +1,4 @@
-/* -----------------------------------------------------------------------
+﻿/* -----------------------------------------------------------------------
    types.c - Copyright (c) 1996, 1998  Red Hat, Inc.
    
    Predefined ffi_types needed by libffi.
@@ -59,14 +59,22 @@ maybe_const ffi_type ffi_type_complex_##name = {	\
   (ffi_type **)ffi_elements_complex_##name		\
 }
 
+const ffi_type ffi_type_uint8 = {
+  1, 1, FFI_TYPE_UINT8, NULL
+};
+
 /* Size and alignment are fake here. They must not be 0. */
 const ffi_type ffi_type_void = {
   1, 1, FFI_TYPE_VOID, NULL
 };
 
-FFI_TYPEDEF(uint8, UINT8, FFI_TYPE_UINT8, const);
+const ffi_type ffi_type_uint16 = {
+  1, 1, FFI_TYPE_UINT16, NULL
+};
+
+// FFI_TYPEDEF(uint8, UINT8, FFI_TYPE_UINT8, const);
 FFI_TYPEDEF(sint8, SINT8, FFI_TYPE_SINT8, const);
-FFI_TYPEDEF(uint16, UINT16, FFI_TYPE_UINT16, const);
+// FFI_TYPEDEF(uint16, UINT16, FFI_TYPE_UINT16, const);
 FFI_TYPEDEF(sint16, SINT16, FFI_TYPE_SINT16, const);
 FFI_TYPEDEF(uint32, UINT32, FFI_TYPE_UINT32, const);
 FFI_TYPEDEF(sint32, SINT32, FFI_TYPE_SINT32, const);

@@ -65,6 +65,7 @@ do
     ;;
     -m64)
       ml="ml64" # "$MSVC/x86_amd64/ml64"
+      # args="$args -MACHINE:X64"
       safeseh=
       shift 1
     ;;

@@ -1,4 +1,4 @@
-/* -----------------------------------------------------------------*-C-*-
+﻿/* -----------------------------------------------------------------*-C-*-
    ffitarget.h - Copyright (c) 2012, 2014  Anthony Green
                  Copyright (c) 1996-2003, 2010  Red Hat, Inc.
                  Copyright (C) 2008  Free Software Foundation, Inc.
@@ -50,7 +50,7 @@
 #endif
 
 #define FFI_TARGET_SPECIFIC_STACK_SPACE_ALLOCATION
-#define FFI_TARGET_HAS_COMPLEX_TYPE
+// #define FFI_TARGET_HAS_COMPLEX_TYPE
 
 /* ---- Generic type definitions ----------------------------------------- */
 

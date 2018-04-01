@@ -1,0 +1,50 @@
+./configure CC="./msvcc.sh -m64" CXX="./msvcc.sh -m64" LD=link CPP="cl -nologo -EP"
+
+/configure CC="./msvcc.sh -m64" CXX="./msvcc.sh -m64" LD=link CPP="cl -nologo -EP"
+
+
+PAHT="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin":`printenv PATH`
+
+/cygdrive/f/workspace/vs14/x64/libffi-3.2.1/configure \
+CC="/cygdrive/f/workspace/vs14/x64/libffi-3.2.1/msvcc.sh -m64" \
+CXX="/cygdrive/f/workspace/vs14/x64/libffi-3.2.1/msvcc.sh -m64" \
+LD=link CPP="cl -nologo -EP" \
+
+
+set MOZBUILDDIR=f:\devtools\mozilabuild\
+set MOZILLABUILD=%MOZBUILDDIR%
+set MOZ_TOOLS=%MOZBUILDDIR%moztools-x64
+start /d "%USERPROFILE%" "" "%MOZILLABUILD%"\msys\bin\bash --login -i
+
+ml64
+
+PAHT="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64":`printenv PATH`
+PAHT=`cygpath "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64"`:`echo $PATH`
+
+cygpath "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin"
+PATH="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin":$PATH
+
+./configure \
+CC=$(pwd)/msvcc.sh \
+CXX=$(pwd)/msvcc.sh \
+LD=link CPP="cl -nologo -EP" \
+CFLAGS=-O2 \
+--prefix=$(pwd)/install \
+
+./configure \
+CC="$(pwd)/msvcc.sh  -DUSE_STATIC_RT -m64" \
+CXX="$(pwd)/msvcc.sh  -DUSE_STATIC_RT -m64" \
+CPP="cl -nologo -EP" \
+LD=link \
+CFLAGS=-O2 \
+--prefix=$(pwd)/install \
+
+../configure \
+CC="../msvcc.sh  -DUSE_STATIC_RT -m64" \
+CXX="../msvcc.sh  -DUSE_STATIC_RT -m64" \
+CPP="cl -nologo -EP" \
+LD=link \
+CFLAGS=-O2 \
+--prefix=$(pwd)/install \
+
+--build=build \

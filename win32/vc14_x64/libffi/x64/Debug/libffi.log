@@ -1,0 +1,18 @@
+﻿  Performing Custom Build Tools
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.24210 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  win64.S
+  Microsoft (R) Macro Assembler (x64) Version 14.00.24210.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+   Assembling: Debug/win64_plain.asm
+  ffi64.c
+  ffi.c
+f:\workspace\vs14\x64\libffi-3.2.1\src\x86\ffi.c(645): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+  raw_api.c
+  prep_cif.c
+  closures.c
+  Generating Code...
+  types.c
+  libffi.vcxproj -> F:\workspace\vs14\x64\libffi-3.2.1\win32\vc14_x64\x64\Debug\libffi.lib
